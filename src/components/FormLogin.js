@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 //import spesifik component seperti StyleSheet untuk style, View untuk pembuatan layout container, dan Text Input untuk pembuatan Form
 import {StyleSheet, View, TextInput} from 'react-native';
-//export default class Logo = untuk membuat class inti
+//export default class FormLogin = untuk membuat class inti
 //extends Component untuk extends/mewarisi react native
 export default class FormLogin extends Component {
   //render() sebagai method yang akan dijalankan ketika class terpanggil atau secara default pada App.js
@@ -39,7 +39,7 @@ export default class FormLogin extends Component {
 const styles = StyleSheet.create({
   //deklarasi style container untuk View component
   container: {
-    flexGrow: 1,
+    flexGrow: 1, //untuk mentata banyak componen yang ada sesuai dengan lebar device
     justifyContent: 'center', //untuk gravity content pada bagian tengah atau center
     alignItems: 'center', //align bagian tengah
   },

@@ -1,4 +1,9 @@
+//Main digunakan bagian kompleks tampilan dari Note
+//import data Component React dari react-native
 import React, {Component} from 'react';
+//import spesifik component seperti StyleSheet untuk style, Text untuk menampilkan text,
+//View untuk pembuatan layout container, dan ScrollView untuk membuat tampilan bisa discroll
+//TextInput untuk membuat fungsi EditText atau form, dan TouchableOpacity untuk membuat Button dengan efek Opacity
 import {
   StyleSheet,
   Text,
@@ -8,23 +13,43 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+//Import Action sebagai navigation dari react-native-router-flux
 import {Actions} from 'react-native-router-flux';
+//import Tampilan dari file note.js
 import Note from './note';
 
+//export default class Logo = untuk membuat class inti
+//extends Component untuk extends/mewarisi react native
 export default class Main extends Component {
+  //
   goBack() {
     Actions.pop();
+    //pop (membatalkan/menghilangkan) action yang telah
+    // dilakukan, fungsi ini mengembalikan action.signup() yang
+    // telah dipanggil, sehingga tampilan yang telah berubah
+    // karena pemanggilan akan kembali ke halaman Login yg
+    // bersifat initial={true}. Fungsi ini nantinya akan
+    // dipanggil saat button text pada halaman Signup diklik
+    // (perhatikan pemanggilan fungsi goBack() dibawah)
   }
+
+  //Setting props untuk menginitialisasi objek properti
   constructor(props) {
-    super(props);
+    super(props); //memanggil constructor pada Component
     this.state = {
+      //initialisasi tempat menyimpan note dengan Array
       noteArray: [],
+      //initialisasi noteText kalimat teks untuk note
       noteText: '',
     };
   }
+  //render() sebagai method yang akan dijalankan ketika class terpanggil atau secara default pada App.js
   render() {
+    //
     let notes = this.state.noteArray.map((val, key) => {
+      //return() untuk mengembalikan layout ketika notes dipanggil
       return (
+        //
         <Note
           key={key}
           keyval={key}
