@@ -12,7 +12,7 @@
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.7",
     "react": "16.9.0",
-    "react-native": "0.61.5",
+    "react-native": "^0.62.0",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-reanimated": "^1.7.0",
     "react-native-router-flux": "^4.2.0",
@@ -20,7 +20,6 @@
     "react-native-screens": "^2.4.0"
   },
   "devDependencies": {
-    "mem": ">=4.0.0",
     "@babel/core": "7.9.0",
     "@babel/runtime": "7.9.2",
     "@react-native-community/eslint-config": "0.0.5",
